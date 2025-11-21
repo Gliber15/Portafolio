@@ -1,0 +1,267 @@
+/* ==========================
+   VARIABLES
+========================== */
+:root {
+       --bg: #0e0f17;
+       --panel: #12121a;
+       --accent: #00eaff;
+       --text: #e8ecf3;
+       --text-light: #a0a4b0;
+       --radius: 12px;
+}
+
+/* ==========================
+   GLOBAL
+========================== */
+* {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: 'Poppins', sans-serif;
+}
+
+body {
+       background: var(--bg);
+       color: var(--text);
+       line-height: 1.6;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+.navbar {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 15px 50px;
+       background: var(--panel);
+       position: sticky;
+       top: 0;
+       z-index: 100;
+}
+
+.logo {
+       font-size: 1.6rem;
+       font-weight: 700;
+       color: var(--accent);
+}
+
+.nav-links {
+       list-style: none;
+       display: flex;
+       gap: 25px;
+}
+
+.nav-links a {
+       text-decoration: none;
+       color: var(--text-light);
+       font-weight: 500;
+       transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+       color: var(--accent);
+}
+
+/* HAMBURGER */
+.hamburger {
+       display: none;
+       flex-direction: column;
+       cursor: pointer;
+       gap: 5px;
+}
+
+.hamburger span {
+       width: 25px;
+       height: 3px;
+       background: var(--text);
+       border-radius: 3px;
+}
+
+/* ==========================
+   CONTACT SECTION
+========================== */
+.contact-section {
+       padding: 80px 50px;
+       text-align: center;
+}
+
+.section-title {
+       font-size: 2.5rem;
+       margin-bottom: 10px;
+       color: var(--accent);
+}
+
+.subtitle {
+       font-size: 1rem;
+       margin-bottom: 40px;
+       color: var(--text-light);
+}
+
+/* ==========================
+   CONTACT CONTAINER
+========================== */
+.contact-container {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 50px;
+       justify-content: center;
+}
+
+/* INFO CARD */
+.contact-info {
+       flex: 1;
+       min-width: 280px;
+       max-width: 400px;
+       display: flex;
+       flex-direction: column;
+       gap: 25px;
+}
+
+.info-card {
+       background: var(--panel);
+       padding: 20px;
+       border-radius: var(--radius);
+       text-align: center;
+       transition: 0.3s;
+}
+
+.info-card:hover {
+       transform: translateY(-5px);
+       box-shadow: 0 0 15px var(--accent);
+}
+
+.info-card img {
+       width: 50px;
+       margin-bottom: 10px;
+}
+
+.info-card h3 {
+       margin-bottom: 5px;
+       color: var(--accent);
+}
+
+.info-card p {
+       color: var(--text-light);
+       font-size: 0.9rem;
+}
+
+/* SOCIAL BUTTONS */
+.social-card {
+       display: flex;
+       flex-direction: column;
+       gap: 15px;
+}
+
+.social-btn {
+       display: flex;
+       align-items: center;
+       gap: 10px;
+       padding: 10px 15px;
+       background: var(--panel);
+       color: var(--text);
+       text-decoration: none;
+       border-radius: var(--radius);
+       transition: 0.3s;
+}
+
+.social-btn img {
+       width: 25px;
+}
+
+.social-btn:hover {
+       background: var(--accent);
+       color: var(--bg);
+       transform: scale(1.05);
+}
+
+/* ==========================
+   FORM
+========================== */
+.contact-form {
+       flex: 1;
+       min-width: 300px;
+       max-width: 500px;
+       background: var(--panel);
+       padding: 30px;
+       border-radius: var(--radius);
+       display: flex;
+       flex-direction: column;
+       gap: 20px;
+}
+
+.input-group {
+       display: flex;
+       flex-direction: column;
+       text-align: left;
+}
+
+.input-group label {
+       margin-bottom: 5px;
+       color: var(--accent);
+}
+
+.input-group input,
+.input-group textarea {
+       padding: 10px;
+       border-radius: var(--radius);
+       border: 1px solid #333;
+       background: #1a1b24;
+       color: var(--text);
+       resize: none;
+       font-size: 0.95rem;
+       transition: 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+       outline: none;
+       border-color: var(--accent);
+}
+
+.btn-send {
+       padding: 12px;
+       background: var(--accent);
+       color: var(--bg);
+       border: none;
+       border-radius: var(--radius);
+       font-size: 1rem;
+       font-weight: 600;
+       cursor: pointer;
+       transition: 0.3s;
+}
+
+.btn-send:hover {
+       background: #00c3ff;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 900px) {
+       .contact-container {
+              flex-direction: column;
+              align-items: center;
+       }
+
+       .hamburger {
+              display: flex;
+       }
+
+       .nav-links {
+              display: none;
+              position: absolute;
+              top: 60px;
+              right: 50px;
+              background: var(--panel);
+              flex-direction: column;
+              gap: 20px;
+              padding: 20px;
+              border-radius: var(--radius);
+       }
+
+       .nav-links.active {
+              display: flex;
+       }
+}
