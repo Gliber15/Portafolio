@@ -76,8 +76,14 @@
 
             </div>
 
-            <!-- Formulario -->
-            <form class="contact-form" id="contactForm">
+            <form class="contact-form" id="contactForm" action="https://formsubmit.co/glibersalazar578@gmail.com"
+                method="POST">
+
+                <!-- Configuraciones extra de FormSubmit -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="Nuevo contacto desde tu Portafolio">
+                <!-- Redirigir de nuevo a la página de contacto (puedes cambiarlo a una página de gracias si quieres) -->
+                <input type="hidden" name="_next" value="https://gliber15.github.io/Portafolio/views/contacto.html">
 
                 <div class="input-group">
                     <label for="nombre">Tu nombre</label>
