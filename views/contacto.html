@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto — SalazarDev</title>
+    <link rel="stylesheet" href="../css/contacto.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">SalazarDev</div>
+
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="sobre_mi.html">Sobre mí</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="habilidades.html">Habilidades</a></li>
+            <li><a class="active" href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN CONTACTO -->
+    <section class="contact-section">
+        <h2 class="section-title">Contáctame</h2>
+        <p class="subtitle">Déjame un mensaje y me pondré en contacto contigo lo antes posible 🚀</p>
+
+        <div class="contact-container">
+
+            <!-- Información de contacto -->
+            <div class="contact-info">
+
+                <div class="info-card">
+                    <img src="../assets/icons/Emai.svg" alt="Icono de email" />
+                    <h3>Email</h3>
+                    <p>glibersalazar578@gmail.com</p>
+                </div>
+
+                <div class="info-card">
+                    <img src="../assets/icons/Telefono.svg" alt="Icono de teléfono" />
+                    <h3>Teléfono</h3>
+                    <p>+51 967 805 211</p>
+                </div>
+
+                <div class="info-card">
+                    <img src="../assets/icons/Ubicacion.svg" alt="Icono de ubicación" />
+                    <h3>Ubicación</h3>
+                    <p>Perú — Lima</p>
+                </div>
+
+                <!-- Redes Dev -->
+                <div class="info-card social-card">
+                    <h3 style="margin-bottom: 15px;">Mis Redes Dev</h3>
+
+                    <a href="https://github.com/" target="_blank" rel="noopener" class="social-btn">
+                        <img src="../assets/icons/github.svg" alt="GitHub" />
+                        GitHub
+                    </a>
+
+                    <a href="https://wa.me/51967805211" target="_blank" rel="noopener" class="social-btn">
+                        <img src="../assets/icons/whatsapp.svg" alt="WhatsApp" />
+                        WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Formulario -->
+            <form class="contact-form" id="contactForm">
+
+                <div class="input-group">
+                    <label for="nombre">Tu nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required />
+                </div>
+
+                <div class="input-group">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required />
+                </div>
+
+                <div class="input-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-send">Enviar mensaje</button>
+            </form>
+
+        </div>
+    </section>
+
+    <script src="../js/contacto.js"></script>
+
+</body>
+
+</html>

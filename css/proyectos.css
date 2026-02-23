@@ -1,0 +1,248 @@
+/* =========================================
+   PROYECTOS — Estilo ULTRA PREMIUM 2025
+========================================= */
+
+:root {
+       --bg: #0a0b10;
+       --panel: #11131d;
+       --glass: rgba(255, 255, 255, 0.05);
+       --text: #eaf0ff;
+       --muted: #9aa0b4;
+       --primary: #00eaff;
+       --radius: 18px;
+       --shadow: 0 12px 50px rgba(0, 0, 0, 0.55);
+
+       /* Gradientes */
+       --grad-blue: linear-gradient(135deg, #00eaff, #006bff);
+       --grad-purple: linear-gradient(135deg, #d400ff, #7b00ff);
+       --grad-orange: linear-gradient(135deg, #ff9d00, #ff4e00);
+}
+
+/* ========== RESET ========== */
+* {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+}
+
+body {
+       font-family: "Inter", sans-serif;
+       background: var(--bg);
+       color: var(--text);
+       line-height: 1.6;
+       overflow-x: hidden;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+       position: fixed;
+       top: 0;
+       width: 100%;
+       padding: 1rem 0;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+
+       background: rgba(10, 10, 15, 0.55);
+       backdrop-filter: blur(12px);
+
+       border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+
+       z-index: 1000;
+}
+
+.logo {
+       font-family: "JetBrains Mono", monospace;
+       font-size: 1.6rem;
+       font-weight: 700;
+       background: var(--grad-blue);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+       display: flex;
+       list-style: none;
+       gap: 1.6rem;
+}
+
+.nav-links li a {
+       text-decoration: none;
+       color: var(--muted);
+       font-weight: 600;
+       transition: .25s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+       color: var(--primary);
+       text-shadow: 0 0 8px var(--primary);
+}
+
+/* ========== SECCIÓN GENERAL ========== */
+.section {
+       padding: 130px 0 90px;
+}
+
+.section-title {
+       text-align: center;
+       font-size: 2.7rem;
+       margin-bottom: 2.5rem;
+       font-weight: 800;
+
+       background: linear-gradient(90deg, #00eaff, #ff72ff);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+
+       letter-spacing: 1px;
+}
+
+/* ========== CONTENEDOR ========== */
+.container {
+       width: 90%;
+       max-width: 1300px;
+       margin: auto;
+}
+
+/* =========================================
+   GRID DE PROYECTOS
+========================================= */
+.projects-grid {
+       display: grid;
+       gap: 2.4rem;
+       grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+}
+
+/* ========== TARJETA DE PROYECTO ========== */
+.project-card {
+       background: rgba(255, 255, 255, 0.03);
+       padding: 2rem;
+       border-radius: var(--radius);
+       border: 1px solid rgba(255, 255, 255, 0.06);
+       box-shadow: var(--shadow);
+
+       display: flex;
+       gap: 1.5rem;
+
+       transform: translateY(25px);
+       opacity: 0;
+
+       transition:
+              transform .6s ease,
+              opacity .6s ease,
+              box-shadow .35s ease,
+              background .35s ease,
+              border .35s ease;
+}
+
+.project-card.show {
+       transform: translateY(0);
+       opacity: 1;
+}
+
+/* Imagen/icono */
+.project-img {
+       min-width: 75px;
+       min-height: 75px;
+
+       border-radius: 14px;
+       display: grid;
+       place-items: center;
+
+       color: white;
+       font-size: 2.2rem;
+
+       box-shadow: 0 8px 22px rgba(0, 229, 255, 0.23);
+}
+
+/* Gradientes */
+.gradient-blue {
+       background: var(--grad-blue);
+}
+
+.gradient-purple {
+       background: var(--grad-purple);
+}
+
+.gradient-orange {
+       background: var(--grad-orange);
+}
+
+/* Info */
+.project-info h3 {
+       font-size: 1.5rem;
+       font-weight: 700;
+       margin-bottom: .4rem;
+}
+
+.project-info p {
+       margin: .6rem 0 1.1rem;
+       color: var(--muted);
+       font-size: .95rem;
+}
+
+/* Etiquetas */
+.tags {
+       display: flex;
+       flex-wrap: wrap;
+       gap: .55rem;
+       margin-bottom: 1.2rem;
+}
+
+.tags span {
+       background: rgba(255, 255, 255, 0.06);
+       padding: .4rem .8rem;
+       border-radius: 10px;
+       font-size: .85rem;
+       font-weight: 600;
+
+       border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Enlaces */
+.project-links {
+       display: flex;
+       align-items: center;
+       gap: 1.1rem;
+}
+
+.project-links a {
+       color: var(--primary);
+       font-weight: 700;
+       text-decoration: none;
+       transition: .25s ease;
+       display: flex;
+       align-items: center;
+       gap: .3rem;
+}
+
+.project-links a i {
+       font-size: 1.2rem;
+}
+
+.project-links a:hover {
+       opacity: .75;
+       text-shadow: 0 0 10px var(--primary);
+}
+
+/* ========== HOVER CARD ========== */
+.project-card:hover {
+       background: rgba(255, 255, 255, 0.07);
+       border: 1px solid rgba(0, 229, 255, 0.28);
+
+       box-shadow: 0 18px 55px rgba(0, 229, 255, 0.22);
+
+       transform: translateY(-8px);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+       .project-card {
+              flex-direction: column;
+              text-align: center;
+       }
+
+       .project-img {
+              margin: auto;
+       }
+}

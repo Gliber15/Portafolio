@@ -1,0 +1,308 @@
+/* =========================================================
+   SOBRE_MÍ — ESTILO PREMIUM
+   ========================================================= */
+
+/* ---------- Variables ---------- */
+:root {
+       --bg: #0e0f17;
+       --panel: #12121a;
+       --glass: rgba(255, 255, 255, 0.03);
+       --accent: linear-gradient(90deg, #00e5ff, #ff6bff);
+       --primary: #00e5ff;
+       --muted: #9aa0b4;
+       --text: #e8ecff;
+       --card-border: rgba(255, 255, 255, 0.04);
+       --radius: 14px;
+       --shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* ---------- Reset ---------- */
+* {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+}
+
+body {
+       background: linear-gradient(180deg, #0b0b10 0%, #0e0f17 100%);
+       font-family: "Inter", system-ui, sans-serif;
+       color: var(--text);
+       line-height: 1.6;
+}
+
+/* ---------- Layout ---------- */
+.container {
+       max-width: 1200px;
+       margin: 0 auto;
+       padding: 0 1.5rem;
+}
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+.navbar {
+       width: 100%;
+       position: fixed;
+       top: 0;
+       padding: .9rem 0;
+       z-index: 1200;
+       transition: all .25s ease;
+       background: transparent;
+}
+
+.navbar.scrolled {
+       background: rgba(10, 12, 18, 0.65);
+       backdrop-filter: blur(8px);
+       box-shadow: 0 8px 26px rgba(2, 8, 20, 0.6);
+       padding: .6rem 0;
+}
+
+.nav-container {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+}
+
+/* Logo */
+.logo {
+       font-family: "JetBrains Mono", monospace;
+       font-size: 1.4rem;
+       font-weight: 700;
+       background: var(--accent);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+}
+
+/* Links */
+.nav-links {
+       display: flex;
+       gap: 1.2rem;
+       list-style: none;
+}
+
+.nav-links a {
+       text-decoration: none;
+       color: var(--muted);
+       font-weight: 600;
+       transition: .2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+       color: var(--primary);
+       transform: translateY(-2px);
+}
+
+/* ---------- Hamburger (mobile) ---------- */
+.hamburger {
+       width: 36px;
+       height: 28px;
+       display: none;
+       flex-direction: column;
+       justify-content: space-between;
+       cursor: pointer;
+}
+
+.hamburger span {
+       height: 3px;
+       background: #fff;
+       border-radius: 4px;
+       transition: .3s ease;
+}
+
+/* Animación */
+.hamburger.open span:nth-child(1) {
+       transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger.open span:nth-child(2) {
+       opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+       transform: rotate(-45deg) translateY(-8px);
+}
+
+/* =========================================================
+   SECCIÓN GENERAL
+   ========================================================= */
+.section {
+       padding: 110px 0 80px;
+}
+
+.section-title {
+       text-align: center;
+       font-size: 2.6rem;
+       font-weight: 700;
+       margin-bottom: 2.2rem;
+}
+
+.section-title span {
+       background: var(--accent);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+}
+
+/* =========================================================
+   ABOUT ME GRID
+   ========================================================= */
+.about-grid {
+       display: grid;
+       grid-template-columns: 1fr 420px;
+       gap: 2rem;
+}
+
+/* ---------- Tarjeta de texto ---------- */
+.about-text {
+       background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015));
+       padding: 2rem;
+       border-radius: var(--radius);
+       border: 1px solid var(--card-border);
+       box-shadow: var(--shadow);
+       transition: .3s ease;
+}
+
+.about-text p {
+       color: var(--muted);
+       margin-bottom: 1rem;
+}
+
+.about-text strong {
+       color: var(--primary);
+}
+
+/* Buttons */
+.btn-group {
+       margin-top: 1.2rem;
+       display: flex;
+       flex-wrap: wrap;
+       gap: .9rem;
+}
+
+.btn-primary,
+.btn-secondary {
+       padding: .72rem 1.05rem;
+       border-radius: 12px;
+       font-weight: 700;
+       cursor: pointer;
+       border: none;
+}
+
+.btn-primary {
+       background: var(--primary);
+       color: #001218;
+       box-shadow: 0 12px 30px rgba(0, 229, 255, .08);
+}
+
+.btn-primary:hover {
+       transform: translateY(-4px);
+}
+
+.btn-secondary {
+       background: transparent;
+       color: var(--primary);
+       border: 1px solid rgba(0, 229, 255, .14);
+}
+
+/* =========================================================
+   SKILLS GRID — CUADROS
+   ========================================================= */
+.skills-grid {
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       gap: 1rem;
+}
+
+.skill-card {
+       background: linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0.01));
+       padding: 1rem;
+       border-radius: 12px;
+       border: 1px solid var(--card-border);
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       gap: .6rem;
+       text-align: center;
+       transition: .22s;
+}
+
+.skill-card img {
+       width: 44px;
+       height: 44px;
+}
+
+.skill-card:hover {
+       transform: translateY(-6px);
+       border-color: rgba(0, 229, 255, .16);
+}
+
+/* Contact info dentro de Skills */
+.contact-card {
+       grid-column: 1 / -1;
+       background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+       padding: 1rem;
+       border-radius: 12px;
+       border: 1px solid var(--card-border);
+}
+
+/* =========================================================
+   ANIMACIONES DE APARICIÓN
+   ========================================================= */
+.about-text,
+.skill-card,
+.contact-card {
+       opacity: 0;
+       transform: translateY(20px);
+       transition: all .7s ease;
+}
+
+.about-text.show,
+.skill-card.show,
+.contact-card.show {
+       opacity: 1;
+       transform: translateY(0);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 1000px) {
+       .about-grid {
+              grid-template-columns: 1fr 1fr;
+       }
+}
+
+@media (max-width: 800px) {
+       .nav-links {
+              display: none;
+       }
+
+       .hamburger {
+              display: flex;
+       }
+
+       .about-grid {
+              grid-template-columns: 1fr;
+       }
+
+       .section {
+              padding: 90px 0 60px;
+       }
+}
+
+@media (max-width: 480px) {
+       .skills-grid {
+              grid-template-columns: 1fr;
+       }
+
+       .skill-card img {
+              width: 36px;
+              height: 36px;
+       }
+}
+
+/* Accesibilidad */
+a:focus {
+       outline: 3px solid rgba(0, 229, 255, .12);
+       outline-offset: 4px;
+}
